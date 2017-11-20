@@ -16,6 +16,8 @@ const Master = require('./lib/master');
  * @param {Object} options {@link Master}
  * @param {Function} callback start success callback
  */
+// 启动 master 进程
 exports.startCluster = function(options, callback) {
+  // 启动成功后执行 callback
   new Master(options).ready(callback);
 };
